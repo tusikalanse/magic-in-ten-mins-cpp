@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "@types/marked": "^1.2.1",
-    "highlight.js": "^10.4.1",
-    "marked": "^1.2.5"
-  },
-  "devDependencies": {}
-}
