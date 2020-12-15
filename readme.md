@@ -10,6 +10,7 @@ QQ群：1070975853 |
 [Telegram Group](https://t.me/joinchat/Gla40h2ZvlSrqImOMaMUEA)
 
 > 目录中方括号里的是前置技能。
+> 本文的c++版本在无特殊声明的情况下为c++11
 
 ## 类型系统
 
@@ -17,7 +18,7 @@ QQ群：1070975853 |
 
 [偏易 | 广义代数数据类型(Generalized Algebriac Data Type)[C++面向对象基础，ADT]](doc/GADT.md)
 
-偏易 | 余代数数据类型(Coalgebraic Data Type)[C++面向对象基础，ADT]
+[偏易 | 余代数数据类型(Coalgebraic Data Type)[C++面向对象基础，ADT]](doc/Codata.md)
 
 偏易 | 单位半群(Monoid)[C++面向对象基础]
 
