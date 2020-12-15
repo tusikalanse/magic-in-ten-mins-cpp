@@ -10,6 +10,7 @@ QQ群：1070975853 |
 [Telegram Group](https://t.me/joinchat/Gla40h2ZvlSrqImOMaMUEA)
 
 > 目录中方括号里的是前置技能。
+> 本文的c++版本在无特殊声明的情况下为c++11
 
 ## 类型系统
 
