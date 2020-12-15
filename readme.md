@@ -1,6 +1,6 @@
 # 十分钟魔法练习（C++）
 
-[原版(玩火)](https://github.com/goldimax/magic-in-ten-mins)
+改写自[十分钟魔法练习(玩火)](https://github.com/goldimax/magic-in-ten-mins)
 
 抽象与组合
 
@@ -15,7 +15,7 @@ QQ群：1070975853 |
 
 [偏易 | 代数数据类型(Algebraic Data Type)[C++面向对象基础]](doc/ADT.md)
 
-偏易 | 广义代数数据类型(Generalized Algebriac Data Type)[C++面向对象基础，ADT]
+[偏易 | 广义代数数据类型(Generalized Algebriac Data Type)[C++面向对象基础，ADT]](doc/GADT.md)
 
 偏易 | 余代数数据类型(Coalgebraic Data Type)[C++面向对象基础，ADT]
 
