@@ -41,7 +41,7 @@ class Teacher final : public SchoolPerson {
 };
 ```
 
-SchoolPerson 可能是 Student 也可能是 Teacher ，可以表示为 Student 和 Teacher 的「和」，即 `string * int + string * string` 。而使用时只需要用 `typeid` 就能知道当前的 StudentPerson 具体是 Student 还是 Teacher [^1]。
+SchoolPerson 可能是 Student 也可能是 Teacher ，可以表示为 Student 和 Teacher 的「和」，即 `string * int + string * string` 。而使用时只需要用 `typeid` 就能知道当前的 StudentPerson 具体是 Student 还是 Teacher [注1]。
 
 ## 代数数据类型（ADT, Algebraic Data Type）
 
@@ -57,7 +57,7 @@ class True final : public Bool {};
 class False final : public Bool {};
 ```
 
-然后用 `typeid(t) == typeid(True)` 就可以用来判定 t 作为 Bool 的值是不是 True [^2]。
+然后用 `typeid(t) == typeid(True)` 就可以用来判定 t 作为 Bool 的值是不是 True [注2]。
 
 比如利用S的数量表示的自然数：
 
@@ -129,12 +129,12 @@ class JsonMap final : public JsonValue {
 };
 ```
 
-> [^1]: 由于c++的RTTI机制, typeid运算符只会对指向子类的基类指针（需要解引用）或引用起作用，并且需要基类有虚函数，因此写了一个Virtualclass提供虚函数
+> [注1]: 由于c++的RTTI机制, typeid运算符只会对指向子类的基类指针（需要解引用）或引用起作用，并且需要基类有虚函数，因此写了一个Virtualclass提供虚函数
 >
-> [^2]: 需要t是指向子类的基类指针（需要解引用）或引用
+> [注2]: 需要t是指向子类的基类指针（需要解引用）或引用
 >
-> [^3]: 上面的和类型代码都存在用户可能自己写一个子类的问题，可以做成类似 Java / C# 中的 sealed class，一种方法为将基类的析构函数设为private并将所有子类设为友元，这样可以组织用户自己写的子类的实例化。
+> [注3]: 上面的和类型代码都存在用户可能自己写一个子类的问题，可以做成类似 Java / C# 中的 sealed class，一种方法为将基类的析构函数设为private并将所有子类设为友元，这样可以组织用户自己写的子类的实例化。
 >
-> [^4]: 上面的和类型代码存在用户实例化基类的问题，可以将基类作为纯虚类（例如将VirtualClass的析构函数设为纯虚函数），子类的析构函数需要实例化，考虑到代码篇幅问题没有采用此方法
+> [注4]: 上面的和类型代码存在用户实例化基类的问题，可以将基类作为纯虚类（例如将VirtualClass的析构函数设为纯虚函数），子类的析构函数需要实例化，考虑到代码篇幅问题没有采用此方法
 >
-> [^5]: 上面的写法是基于变量非空假设的，也就是代码中不会出现 null ，所有变量也不为 null 。
+> [注5]: 上面的写法是基于变量非空假设的，也就是代码中不会出现 null ，所有变量也不为 null 。

@@ -16,7 +16,7 @@
 
 举个例子， `{+, 自然数集}` 的单位元就是 0 ， `{*, 自然数集}` 的单位元就是 1 ， `{+, 字符串集}` 的单位元就是空串 `""` 。
 
-用 C++ 代码可以表示为[^1]：
+用 C++ 代码可以表示为[注1]：
 
 ```cpp
 template <typename T>
@@ -35,7 +35,7 @@ public:
 };
 ```
 
-## 应用：optional[^2]
+## 应用：optional[注2]
 
 在 c++17 中有个新的类 `optional` 可以用来表示可能有值的类型，而我们可以对它定义个 Monoid ：
 
@@ -65,7 +65,7 @@ std::optional<int> firstValue = OptionalM<int>().appends({
 
 ## 应用：Ordering
 
-使用类似java中的`compare`和`compareTo`可以构造出[^3]：
+使用类似java中的`compare`和`compareTo`可以构造出[注3]：
 
 ```cpp
 class OrderingM : public Monoid<int> {
@@ -152,8 +152,8 @@ Todo().appends({
 
 该段代码中的logic均为打印自身变量名的匿名函数，结果为依次输出logic1, logic_when, logic_els, logic2, logic_cond
 
-> [^1]：这里用`vector`只是为了方便演示，若有需要也可以换成`list`或是两个迭代器，自己实现了`appends`而非采用系统的`std::accumulate`或`std::reduce`的原因是它俩似乎不能接受非静态函数作为第四个变量（也可能是我c++学艺不精，不过本文重点并不在这）。
+> [注1]：这里用`vector`只是为了方便演示，若有需要也可以换成`list`或是两个迭代器，自己实现了`appends`而非采用系统的`std::accumulate`或`std::reduce`的原因是它俩似乎不能接受非静态函数作为第四个变量（也可能是我c++学艺不精，不过本文重点并不在这）。
 
-> [^2]：需要c++17, optional 并不是 lazy 的，实际运用中加上非空短路能提高效率。
+> [注2]：需要c++17, optional 并不是 lazy 的，实际运用中加上非空短路能提高效率。
 
-> [^3]：这里实现了类似c++20中的三路比较运算符的功能，即按字典序比较每一个成员，实际使用中可以修改`compare`的定义使其返回值更精确而非只有0和正负1。
+> [注3]：这里实现了类似c++20中的三路比较运算符的功能，即按字典序比较每一个成员，实际使用中可以修改`compare`的定义使其返回值更精确而非只有0和正负1。
