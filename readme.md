@@ -20,7 +20,7 @@ QQ群：1070975853 |
 
 [偏易 | 余代数数据类型(Coalgebraic Data Type)[C++面向对象基础，ADT]](doc/CoData.md)
 
-偏易 | 单位半群(Monoid)[C++面向对象基础]
+[偏易 | 单位半群(Monoid)[C++面向对象基础]](doc/Monoid.md)
 
 较难 | 高阶类型(Higher Kinded Type)[C++面向对象基础]
 
