@@ -45,11 +45,11 @@ class BVal : public Expr<bool> {
 };
 
 class Add : public Expr<int> {
-    Expr *e1, *e2;
+    Expr<int> *e1, *e2;
 };
 
 class Eq : public Expr<bool> {
-    Expr *e1, *e2;
+    Expr<bool> *e1, *e2;
 };
 ```
 
