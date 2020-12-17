@@ -26,11 +26,10 @@ public:
     virtual T empty() = 0;
     virtual T append(T a, T b) = 0;
     T appends(const std::vector<T> &x) {
-        T init = empty();
-        for (int i = 0; i < x.size(); ++i) {
-            init = append(init, x[i]);
-        }
-        return init;
+        return std::reduce(
+            x.begin(), x.end(), empty(),
+            std::bind(&Monoid<T>::append, this, std::placeholders::_1,
+            std::placeholders::_2));
     }
 };
 ```
@@ -152,8 +151,7 @@ Todo().appends({
 
 该段代码中的logic均为打印自身变量名的匿名函数，结果为依次输出logic1, logic_when, logic_els, logic2, logic_cond
 
-> [注1]：这里用`vector`只是为了方便演示，若有需要也可以换成`list`或是两个迭代器，自己实现了`appends`，你也可以改用```std::accumulate(x.begin(), x.end(), empty(), std::bind(&Monoid<T>::append, this, std::placeholders::_1,
-std::placeholders::_2))```
+> [注1]：需要c++17， 这里用`vector`只是为了方便演示，若有需要也可以换成`list`或是两个迭代器，`appends`，也可以用```std::accumulate```代替```std::reduce```，只是```reduce```可以并行，更能展示单位半群可结合的特点。
 
 > [注2]：需要c++17, optional 并不是 lazy 的，实际运用中加上非空短路能提高效率（需要更改`appends`的实现，可以派生出新类或是直接提供另一个接口）。
 
