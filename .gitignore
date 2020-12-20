@@ -1,3 +1,7 @@
 doc/*.png
 node_modules
 package-lock.json
+
+### vscode ###
+.vscode/*
+*.code-workspace
