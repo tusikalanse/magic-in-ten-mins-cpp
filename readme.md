@@ -22,7 +22,7 @@ QQ群：1070975853 |
 
 [偏易 | 单位半群(Monoid)[C++面向对象基础]](doc/Monoid.md)
 
-较难 | 高阶类型(Higher Kinded Type)[C++面向对象基础]
+[较难 | 高阶类型(Higher Kinded Type)[C++面向对象基础，模板基础]](doc/HKT.md)
 
 中等 | 单子(Monad)[C++面向对象基础，HKT]
 
