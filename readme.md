@@ -1,6 +1,8 @@
 # 十分钟魔法练习（C++）
 
-改写自[十分钟魔法练习(玩火)](https://github.com/goldimax/magic-in-ten-mins)
+改写自[十分钟魔法练习(玩火)](https://github.com/goldimax/magic-in-ten-mins), 原版为java实现
+
+其他版本：[Rust版 - 光量子](https://github.com/PhotonQuantum/magic-in-ten-mins-rs) | [C#版-CWKSC](https://github.com/CWKSC/magic-in-ten-mins-csharp)
 
 抽象与组合
 
@@ -28,9 +30,13 @@ QQ群：1070975853 |
 
 较难 | 状态单子(State Monad)[C++面向对象基础，HKT，Monad]
 
-中等 | 简单类型 λ 演算(Simply-Typed Lambda Calculus)[C++面向对象 基础，ADT，λ 演算]
+中等 | 简单类型 λ 演算(Simply-Typed Lambda Calculus)[C++面向对象基础，ADT，λ 演算]
 
-中等 | 系统 F(System F)[C++面向对象 基础，ADT，简单类型 λ 演算]
+中等 | 系统 F(System F)[C++面向对象基础，ADT，简单类型 λ 演算]
+
+较难 | 构造演算(Calculus of Construction)[C++面向对象基础， ADT ，系统 F ω]
+
+偏易 | π 类型和 Σ 类型(Pi type & Sigma type)[ADT ，构造演算]
 
 ## 计算理论
 
@@ -40,7 +46,9 @@ QQ群：1070975853 |
 
 较难 | 编码(Encode)[λ演算]
 
-中等 | Y 组合子(Y Combinator)[C++面向对象 基础，λ 演算，λ 演算编码]
+中等 | Y 组合子(Y Combinator)[C++面向对象基础，λ 演算，λ 演算编码]
+
+中等 | μ(Mu)[C++面向对象基础，构造演算， Y 组合子]
 
 ## 编程范式
 
