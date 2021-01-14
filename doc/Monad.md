@@ -9,6 +9,7 @@
 单子(Monad)是指一种有一个类型参数的数据结构，拥有 `pure` （也叫 `unit` 或者 `return` ）和 `flatMap` （也叫 `bind` 或者 `>>=` ）两种操作：
 
 ```cpp
+template <template <typename> typename M>
 class Monad {
 public:
   template <typename A>
