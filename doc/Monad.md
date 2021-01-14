@@ -64,7 +64,7 @@ C++ 不是一个空安全的语言，也就是说任何指针都有可能为 `nu
 Maybe<int> addI(Maybe<int> ma, Maybe<int> mb) {
   if (ma.value == nullptr) return Maybe<int>();
   if (mb.value == nullptr) return Maybe<int>();
-  return Maybe<int>(new int(*ma.value + *mb.value));
+  return Maybe<int>(*ma.value + *mb.value);
 }
 ```
 
@@ -77,6 +77,7 @@ public:
   T* value;
   Maybe() {value = nullptr;}
   Maybe(T p) {value = new T(p);}
+  ~Maybe() {if (value != nullptr) delete value;}
 };
 ```
 
