@@ -28,7 +28,7 @@ QQ群：1070975853 |
 
 [中等 | 单子(Monad)[C++面向对象基础，HKT]](doc/Monad.md)
 
-较难 | 状态单子(State Monad)[C++面向对象基础，HKT，Monad]
+[较难 | 状态单子(State Monad)[C++面向对象基础，HKT，Monad]](doc/StateMonad.md)
 
 中等 | 简单类型 λ 演算(Simply-Typed Lambda Calculus)[C++面向对象基础，ADT，λ 演算]
 
