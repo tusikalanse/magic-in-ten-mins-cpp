@@ -9,6 +9,7 @@
 单子(Monad)是指一种有一个类型参数的数据结构，拥有 `pure` （也叫 `unit` 或者 `return` ）和 `flatMap` （也叫 `bind` 或者 `>>=` ）两种操作：
 
 ```cpp
+template <template <typename> typename M>
 class Monad {
 public:
   template <typename A>
@@ -64,7 +65,7 @@ C++ 不是一个空安全的语言，也就是说任何指针都有可能为 `nu
 Maybe<int> addI(Maybe<int> ma, Maybe<int> mb) {
   if (ma.value == nullptr) return Maybe<int>();
   if (mb.value == nullptr) return Maybe<int>();
-  return Maybe<int>(new int(*ma.value + *mb.value));
+  return Maybe<int>(*ma.value + *mb.value);
 }
 ```
 
@@ -77,6 +78,7 @@ public:
   T* value;
   Maybe() {value = nullptr;}
   Maybe(T p) {value = new T(p);}
+  ~Maybe() {if (value != nullptr) delete value;}
 };
 ```
 
